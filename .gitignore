@@ -1,3 +1,6 @@
+*
+!*.yaml
+!www
+!.gitignore
 secrets.yaml
 known_device.yaml
-deps

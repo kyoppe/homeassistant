@@ -1,0 +1,189 @@
+
+kyophone7:
+  hide_if_away: false
+  icon:
+  mac: 7C:50:49:16:42:55
+  name: kyoPhone7
+  picture: /local/pic/kyouhei2008tag.jpg
+  track: true
+  vendor: Apple, Inc.
+
+'1921680203':
+  hide_if_away: false
+  icon:
+  mac: 6C:70:9F:D0:D5:B2
+  name: AirMac Extreme
+  picture: /local/pic/airmac.jpg
+  track: true
+  vendor: Apple, Inc.
+
+broadlink_rmminif06c13:
+  hide_if_away: false
+  icon:
+  mac: B4:43:0D:F0:6C:13
+  name: RM mini
+  picture: /local/pic/rmmini.jpg
+  track: true
+  vendor: Broadlink Pty Ltd
+
+taephone6:
+  hide_if_away: false
+  icon:
+  mac: 88:E8:7F:F2:26:0F
+  name: taePhone6
+  picture: /local/pic/iphone.png
+  track: true
+  vendor: Apple, Inc.
+
+'1921680106':
+  hide_if_away: false
+  icon:
+  mac: 00:1F:33:EA:5F:25
+  name: ReadyNAS Pro
+  picture: /local/pic/netgear.jpg
+  track: true
+  vendor: NETGEAR
+
+'1921680101':
+  hide_if_away: false
+  icon:
+  mac: 00:0C:29:9A:FF:12
+  name: vm-kyouhei-1
+  picture: /local/pic/vm.png
+  track: true
+  vendor: VMware, Inc.
+
+taemac:
+  hide_if_away: false
+  icon:
+  mac: 88:63:DF:A5:C6:01
+  name: taeMac
+  picture: /local/pic/imac.png
+  track: true
+  vendor: Apple, Inc.
+
+brw008092b8aae7:
+  hide_if_away: false
+  icon:
+  mac: 00:80:92:B8:AA:E7
+  name: brw008092b8aae7
+  picture:
+  track: true
+  vendor: Silex Technology, Inc.
+
+amazon379ab9295:
+  hide_if_away: false
+  icon:
+  mac: 40:B4:CD:7E:D7:B3
+  name: Fire TV
+  picture: /local/pic/fire.jpg
+  track: true
+  vendor: Amazon Technologies Inc.
+
+aibookair:
+  hide_if_away: false
+  icon:
+  mac: 9C:F3:87:D8:10:F4
+  name: aiBookAir
+  picture: /local/pic/macbookair.png
+  track: true
+  vendor: Apple, Inc.
+
+'1921680103':
+  hide_if_away: false
+  icon:
+  mac: 00:0C:29:E1:53:BC
+  name: vm-ubunto1004
+  picture: /local/pic/vm.png
+  track: true
+  vendor: VMware, Inc.
+
+appletv:
+  hide_if_away: false
+  icon:
+  mac: 58:55:CA:33:98:80
+  name: Apple TV
+  picture: /local/pic/appletv.png
+  track: true
+  vendor: Apple, Inc.
+
+'1921680110':
+  hide_if_away: false
+  icon:
+  mac: 00:80:F0:85:75:77
+  name: Entrance Camera
+  picture:
+  track: true
+  vendor: unknown
+
+'192168043':
+  hide_if_away: false
+  icon:
+  mac: 04:03:D6:54:4D:BC
+  name: Nintendo Switch(Wi-Fi)
+  picture: /local/pic/switch.jpg
+  track: true
+  vendor: unknown
+
+wii:
+  hide_if_away: false
+  icon:
+  mac: 00:1D:BC:17:DD:52
+  name: Nintendo Wii
+  picture: /local/pic/wii.png
+  track: true
+  vendor: unknown
+
+'192168099':
+  hide_if_away: false
+  icon:
+  mac: 00:25:22:F9:D1:8B
+  name: ESXi
+  picture: /local/pic/esxi.png
+  track: true
+  vendor: unknown
+
+kyopad3:
+  hide_if_away: false
+  icon:
+  mac: 64:20:0C:E3:C1:E4
+  name: kyoPad3
+  picture: /local/pic/ipad.png
+  track: true
+  vendor: Apple, Inc.
+
+'1921680254':
+  hide_if_away: false
+  icon:
+  mac: FC:C8:97:B0:CF:69
+  name: Gateway
+  picture: /local/pic/gateway.jpg
+  track: true
+  vendor: zte corporation
+
+'192168040':
+  hide_if_away: false
+  icon:
+  mac: 34:3D:C4:9A:A5:AC
+  name: Nintendo Switch
+  picture: /local/pic/switch.jpg
+  track: true
+  vendor: BUFFALO.INC
+
+'192168037':
+  hide_if_away: false
+  icon:
+  mac: 28:24:FF:84:0B:96
+  name: AQUOS TV
+  picture: /local/pic/aquos.png
+  track: true
+  vendor: Wistron Neweb Corporation
+
+kyobookair:
+  hide_if_away: false
+  icon:
+  mac: 64:76:BA:89:E3:A8
+  name: kyoBookAir
+  picture: /local/pic/macbookair.png
+  track: true
+  vendor: Apple, Inc.

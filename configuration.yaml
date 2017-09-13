@@ -1,0 +1,116 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Boxhouse120
+  # Location required to calculate the time the sun rises and sets
+  latitude: 35.642610
+  longitude: 139.276145
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 178
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Tokyo
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+    api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+    name: Weather
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+ios:
+
+camera:
+  - platform: mjpeg
+    name: Entrance Camera
+    mjpeg_url: 'http://192.168.0.110/nphMotionJpeg?Resolution=640x480&Quality=Standard'
+    username: !secret camera_username
+    password: !secret http_password
+
+switch:
+  - platform: broadlink
+    host: 192.168.0.41 
+    mac: 'B4:43:0D:F0:6C:13'
+    switches:
+        tv_aquos:
+            friendly_name: "TV Power"
+            command_on: 'JgDMAG44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MDw0rDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSoNDw0PDA8NKwwPDQ8MEAwrDA8NKwwrDQAJEW44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MEAwrDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSsMDw0PDA8NKwwPDQ8MEAwrDBAMKwwrDQANBQAAAAAAAAAAAAAAAA=='
+            command_off: 'JgDMAG44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MDw0rDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSoNDw0PDA8NKwwPDQ8MEAwrDA8NKwwrDQAJEW44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MEAwrDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSsMDw0PDA8NKwwPDQ8MEAwrDBAMKwwrDQANBQAAAAAAAAAAAAAAAA=='
+        amp:
+            friendly_name: "AV Selector"
+            command_on: "JgBgAAABJJUTEhE4EhMSExE4EhMROBI4ERQRExI4ETgTEhI4ETgSExE4EjgRFBE4EhMRExI4EjcSExITETgTEhI4ETgSExITEQAFGwABJUsSAAxHAAElSxMADEYAASVLEgANBQAAAAAAAAAA"  
+            command_off: "JgBgAAABJJUTEhE4EhMSExE4EhMROBI4ERQRExI4ETgTEhI4ETgSExE4EjgRFBE4EhMRExI4EjcSExITETgTEhI4ETgSExITEQAFGwABJUsSAAxHAAElSxMADEYAASVLEgANBQAAAAAAAAAA"  
+
+media_player:
+  - platform: aquostv
+    host: 192.168.0.37
+  - platform: firetv
+
+apple_tv:
+  - host: 192.168.0.32
+    login_id: 00000000-0da1-9014-c110-16a6b051452d
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.0.0/24
+
+script:
+    tv_on:
+        sequence:
+          - service: broadlink.send_packet_192_168_0_41
+            data:
+                packet: 
+                  - "JgDMAG44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MDw0rDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSoNDw0PDA8NKwwPDQ8MEAwrDA8NKwwrDQAJEW44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MEAwrDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSsMDw0PDA8NKwwPDQ8MEAwrDBAMKwwrDQANBQAAAAAAAAAAAAAAAA=="
+                  - "JgBgAAABJJUTEhE4EhMSExE4EhMROBI4ERQRExI4ETgTEhI4ETgSExE4EjgRFBE4EhMRExI4EjcSExITETgTEhI4ETgSExITEQAFGwABJUsSAAxHAAElSxMADEYAASVLEgANBQAAAAAAAAAA"  
+                  - "JgBoAAABJZQSExI4ERMSExI4ERMSOBE4EzcRFBE4EjcSExI4ETgSExE4EhMSExE4EhMSExETEhMSExE4EjgSExE4EjgROBM3EQAE9wABJEwRAAxIAAEkTBEADEcAASVMEQAMRwABJUwRAA0F"
+          - service: media_player.select_source
+            entity_id: media_player.sharp_aquos_tv
+            data:
+                source: "TV / Antenna"

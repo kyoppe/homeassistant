@@ -10,3 +10,5 @@
     platform: state
     from: 'not_home'
     to: 'home'
+    for:
+      minutes: 10

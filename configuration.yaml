@@ -102,7 +102,8 @@ device_tracker:
     hosts: 192.168.0.0/24
 
 ifttt:
-    key: bPBlHs4KLcACfgb0nikwnl
+    key: !secret ifttt_key
+
 script:
     tv_on:
         sequence:

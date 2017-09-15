@@ -1,1 +1,12 @@
-[]
+- action:
+  - data:
+      event: Switch_turned_on
+    service: ifttt.trigger
+  alias: Playing_Switch
+  condition: []
+  id: '1505457440249'
+  trigger:
+  - entity_id: device_tracker.192168040
+    platform: state
+    from: 'not_home'
+    to: 'home'

@@ -103,17 +103,3 @@ device_tracker:
 
 ifttt:
     key: !secret ifttt_key
-
-script:
-    tv_on:
-        sequence:
-          - service: broadlink.send_packet_192_168_0_41
-            data:
-                packet: 
-                  - "JgDMAG44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MDw0rDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSoNDw0PDA8NKwwPDQ8MEAwrDA8NKwwrDQAJEW44DQ8MKw0PDCsNDwwrDQ8MKw0PDCsNDwwrDSsMDw0rDA8NKwwrDCsNKwwPDQ8MEAwrDA8NKwwPDQ8MKw0PDBAMDw0PDCsNKg0PDSsMDw0PDA8NKwwPDQ8MEAwrDBAMKwwrDQANBQAAAAAAAAAAAAAAAA=="
-                  - "JgBgAAABJJUTEhE4EhMSExE4EhMROBI4ERQRExI4ETgTEhI4ETgSExE4EjgRFBE4EhMRExI4EjcSExITETgTEhI4ETgSExITEQAFGwABJUsSAAxHAAElSxMADEYAASVLEgANBQAAAAAAAAAA"  
-                  - "JgBoAAABJZQSExI4ERMSExI4ERMSOBE4EzcRFBE4EjcSExI4ETgSExE4EhMSExE4EhMSExETEhMSExE4EjgSExE4EjgROBM3EQAE9wABJEwRAAxIAAEkTBEADEcAASVMEQAMRwABJUwRAA0F"
-          - service: media_player.select_source
-            entity_id: media_player.sharp_aquos_tv
-            data:
-                source: "TV / Antenna"

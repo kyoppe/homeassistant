@@ -1,6 +1,6 @@
 - action:
   - data:
-      event: Switch_turned_on
+      event: Playing_Switch
     service: ifttt.trigger
   alias: Playing_Switch
   condition: []

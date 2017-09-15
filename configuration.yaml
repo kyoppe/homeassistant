@@ -101,6 +101,8 @@ device_tracker:
   - platform: nmap_tracker
     hosts: 192.168.0.0/24
 
+ifttt:
+    key: bPBlHs4KLcACfgb0nikwnl
 script:
     tv_on:
         sequence:

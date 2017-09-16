@@ -33,7 +33,7 @@
   - data:
       packet: JgBgAAABJJUTEhE4EhMSExE4EhMROBI4ERQRExI4ETgTEhI4ETgSExE4EjgRFBE4EhMRExI4EjcSExITETgTEhI4ETgSExITEQAFGwABJUsSAAxHAAElSxMADEYAASVLEgANBQAAAAAAAAAA
     service: broadlink.send_packet_192_168_0_41
-  alias: TV On
+  alias: On TV On
   condition: []
   id: '1505530322653'
   trigger:
@@ -41,3 +41,15 @@
     from: 'off'
     platform: state
     to: 'on'
+- action:
+  - data:
+      packet: JgBgAAABJJUTEhE4EhMSExE4EhMROBI4ERQRExI4ETgTEhI4ETgSExE4EjgRFBE4EhMRExI4EjcSExITETgTEhI4ETgSExITEQAFGwABJUsSAAxHAAElSxMADEYAASVLEgANBQAAAAAAAAAA
+    service: broadlink.send_packet_192_168_0_41
+  alias: On TV Off
+  condition: []
+  id: '1505530322654'
+  trigger:
+  - entity_id: media_player.aquostv
+    from: 'on'
+    platform: state
+    to: 'off'

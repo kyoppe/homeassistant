@@ -1,14 +1,43 @@
 - action:
   - data:
-      event: Playing_Switch
-    service: ifttt.trigger
-  alias: Playing_Switch
+      message: Kids are playing the Switch
+    service: notify.ios_kyophone7
+  alias: Switch
   condition: []
   id: '1505457440249'
   trigger:
   - entity_id: device_tracker.192168040
-    platform: state
-    from: 'not_home'
-    to: 'home'
     for:
       minutes: 10
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - data:
+      message: Kids are playing the Switch on WiFI
+    service: notify.ios_kyophone7
+  alias: Switch Wifi
+  condition: []
+  id: '1505529449020'
+  trigger:
+  - entity_id: device_tracker.192168043
+    for:
+      minutes: 10
+    from: not_home
+    platform: state
+    to: home
+- action:
+  - data:
+      message: TV is turned on
+    service: notify.ios_kyophone7
+  - data:
+      packet: JgBgAAABJJUTEhE4EhMSExE4EhMROBI4ERQRExI4ETgTEhI4ETgSExE4EjgRFBE4EhMRExI4EjcSExITETgTEhI4ETgSExITEQAFGwABJUsSAAxHAAElSxMADEYAASVLEgANBQAAAAAAAAAA
+    service: broadlink.send_packet_192_168_0_41
+  alias: TV On
+  condition: []
+  id: '1505530322653'
+  trigger:
+  - entity_id: media_player.aquostv
+    from: 'off'
+    platform: state
+    to: 'on'

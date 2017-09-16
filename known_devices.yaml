@@ -187,3 +187,12 @@ kyobookair:
   picture: /local/pic/macbookair.png
   track: true
   vendor: Apple, Inc.
+
+ipad:
+  hide_if_away: false
+  icon:
+  mac: D0:23:DB:EC:36:11
+  name: iPad
+  picture: /local/pic/ipad.png
+  track: true
+  vendor: Apple, Inc.

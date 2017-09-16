@@ -91,7 +91,7 @@ switch:
 media_player:
   - platform: aquostv
     host: 192.168.0.37
-  - platform: firetv
+    name: aquostv
 
 apple_tv:
   - host: 192.168.0.32

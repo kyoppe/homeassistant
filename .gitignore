@@ -3,4 +3,4 @@
 !www
 !.gitignore
 secrets.yaml
-known_device.yaml
+known_devices.yaml

@@ -196,3 +196,39 @@ ipad:
   picture: /local/pic/ipad.png
   track: true
   vendor: Apple, Inc.
+
+tomophone4:
+  hide_if_away: false
+  icon:
+  mac: 2C:20:0B:F0:8C:68
+  name: tomophone-4
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+myphone:
+  hide_if_away: false
+  icon:
+  mac: 8C:8E:F2:BE:AE:5A
+  name: myphone
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+amazond7d6705e3:
+  hide_if_away: false
+  icon:
+  mac: 44:65:0D:8D:F7:30
+  name: amazon-d7d6705e3
+  picture:
+  track: true
+  vendor: Amazon Technologies Inc.
+
+googlehome:
+  hide_if_away: false
+  icon:
+  mac: D8:6C:63:59:DA:80
+  name: google-home
+  picture:
+  track: true
+  vendor: Google, Inc.

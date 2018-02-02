@@ -3,8 +3,8 @@ kyophone7:
   hide_if_away: false
   icon:
   mac: 7C:50:49:16:42:55
-  name: kyoPhone7
-  picture: /local/pic/kyouhei2008tag.jpg
+  name: aiPhone7
+  #  picture: /local/pic/kyouhei2008tag.jpg
   track: true
   vendor: Apple, Inc.
 
